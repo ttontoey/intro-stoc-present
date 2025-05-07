@@ -63,6 +63,6 @@ int main(){
     // Compute discounted option value
     double premium = exp(-r) * (sum / (1.0 * N)); 
 
-    cout << "The analytical solution of option fair price is " << premium;
+    cout << "The numerical solution of option fair price is " << premium;
 
 }
