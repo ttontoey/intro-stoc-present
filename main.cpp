@@ -2,6 +2,8 @@
 #include <random>
 #include <vector>
 #include <cmath>
+#include <cstdlib>
+#include <iomanip>
 
 using namespace std;
 
@@ -80,6 +82,11 @@ int main(){
     // Compute discounted option value at t = 0
     double premium = exp(-r) * C_1; 
 
-    cout << "The numerical solution of option fair price is " << premium;
+    // Round decimal display to 4 decimal points
+    cout << std::fixed << std::setprecision(4) << "The numerical solution of option fair price is " << premium << endl;
+
+    // Without the following lines, .exe will close itself immediately.
+    system("pause"); // Wait for user input before closing the window
+    return 0;
 
 }
